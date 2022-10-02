@@ -105,6 +105,7 @@ body {
     color: var(--very-dark-gray);
     letter-spacing: 4px;
     font-weight: 700;
+    margin-bottom: 60px;
 }
 
 .main__arrow {
@@ -154,5 +155,13 @@ body {
             "main main main main cta cta cta"
             "img1 img1 about about about img2 img2"
             "img1 img1 about about about img2 img2"
+    }
+
+    .main__cta {
+        margin-bottom: 0px;
+    }
+
+    .main__about {
+        padding-bottom: 0px;
     }
 }

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+
+:root {
+    --dark-gray: hsl(0, 0%, 63%);
+    --very-dark-gray: hsl(0, 0%, 27%);
+    --spartan: 'League Spartan', sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--spartan);
+}
+
+.main {
+    display: grid;
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, max-content);
+    grid-template-areas:
+        "main"
+        "cta"
+        "img1"
+        "about"
+        "img2";
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 60px 0 0;
+}
+
+.main__hero {
+    grid-area: main;
+    background-image: url(images/desktop-image-hero-1.jpg);
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.main__nav {
+    display: flex;
+}
+
+.main__links {
+    display: none;
+}
+
+.main__logo {
+    margin: 0 auto;
+}
+
+.main__controls {
+    grid-area: main;
+    align-self: flex-end;
+    justify-self: flex-end;
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main__control {
+    height: 40%;
+}
+
+.main__buy {
+    grid-area: cta;
+}
+
+.main__content {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main__title {
+    color: black;
+    font-size: 35px;
+    letter-spacing: .1px;
+    line-height: 1;
+}
+
+.main__parrafo {
+    color: var(--dark-gray);
+    line-height: 1.5;
+    margin: 1em 0 2em;
+}
+
+.main__cta {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--very-dark-gray);
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.main__arrow {
+    padding-left: 20px;
+}
+
+.main__img1 {
+    grid-area: img1;
+    min-height: 250px;
+    height: 100%;
+    background-image: url(images/image-about-dark.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.main__about {
+    grid-area: about;
+}
+
+.about__title {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+.main__img2 {
+    grid-area: img2;
+    min-height: 250px;
+    height: 100%;
+    background-image: url(images/image-about-light.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 85%;
+        padding: 70px 0;
+    }
+
+    .main {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-areas:
+            "main main main main cta cta cta"
+            "main main main main cta cta cta"
+            "main main main main cta cta cta"
+            "img1 img1 about about about img2 img2"
+            "img1 img1 about about about img2 img2"
+    }
+}
